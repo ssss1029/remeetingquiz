@@ -27,6 +27,7 @@ def get_random_string(string_length):
 	random_chars = [chr(int(33 + random.random() * (126 - 33))) for _ in range(string_length)]
 	return reduce(lambda a, b: str(a) + str(b), random_chars) + '\n'
 
+## try/catch required here to make sure the KeyboardInterrupt error does not get displayed in stderr (if the input is being read from the terminal)
 try:
 	read(RANDOM_LINE_LENGTH)
 except KeyboardInterrupt:

@@ -1,8 +1,9 @@
 from functools import reduce
 
 def variance(data):
-	mean = sum(data) / float(len(data))
-	second_moment = sum([x*x for x in data]) / float(len(data))
+	data_length = len(data)
+	mean = sum(data) / float(data_length)
+	second_moment = sum([x*x for x in data]) / float(data_length)
 	return (second_moment - mean*mean)
 
 def function(data):
